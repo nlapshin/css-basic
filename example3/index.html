@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Одна колонка для боковой панели, три колонки для основного контента */
+            grid-template-rows: auto 1fr auto; /* Авто-высота для шапки и подвала, оставшееся пространство для контента */
+            gap: 10px; /* Отступы между сетками */
+        }
+
+        .header, .footer {
+            grid-column: 1 / -1; /* Растягивание шапки и подвала на всю ширину сетки */
+        }
+
+        .header {
+            background-color: red;
+        }
+
+        .sidebar {
+            background-color: yellow;
+        }
+
+        .content {
+            background-color: green;
+        }
+
+        .footer {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <header class="header">Шапка</header>
+    <aside class="sidebar">Боковая панель</aside>
+    <main class="content">Основной контент</main>
+    <footer class="footer">Подвал</footer>
+</div>
+
+</body>
+</html>

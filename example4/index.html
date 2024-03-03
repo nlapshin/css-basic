@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation: moveAndChange 4s infinite alternate;
+        }
+
+        @keyframes moveAndChange {
+            0% {
+                background-color: blue;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background-color: green;
+            }
+            50% {
+                background-color: yellow;
+                left: 200px;
+            }
+            75% {
+                background-color: red;
+            }
+            100% {
+                background-color: purple;
+                left: 0;
+                top: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="animated-box">Анимированный блок</div>
+
+</body>
+</html>

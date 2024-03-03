@@ -1,0 +1,132 @@
+/* Селектор типа */
+p {
+  color: blue;
+}
+
+/* Классовый селектор */
+.commonClass {
+  color: green;
+}
+
+/* Селектор с несколькими классами */
+.commonClass.specialClass {
+  color: red;
+}
+
+/* Селектор ID */
+#uniqueId {
+  color: purple;
+}
+
+/* Селектор атрибута */
+a[href="#"] {
+  font-weight: bold;
+}
+
+/* Псевдокласс */
+.link:hover {
+  color: orange;
+}
+
+/* Селектор потомков */
+span .innerSpan {
+  color: brown;
+}
+
+/* Прямой дочерний селектор */
+body > div {
+  border: 1px solid black;
+}
+
+/* Селектор соседних элементов */
+p + div {
+  border-top: 2px dashed gray;
+}
+
+#my-id {
+  color: blue;
+}
+
+.my-class {
+  color: red !important;
+}
+
+
+@media (max-width: 600px) {
+  body {
+      background-color: lightblue;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+      background-color: lightgreen;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+      background-color: lightyellow;
+  }
+}
+
+:root {
+  --main-color: blue;
+  --accent-color: green;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+
+.relative-example {
+  position: relative;
+  top: 10px; /* Сместить вниз на 10px от обычного положения */
+  left: 20px; /* Сместить вправо на 20px от обычного положения */
+}
+
+.absolute-example {
+  position: absolute;
+  top: 0;
+  right: 0; /* Прижать к верхнему правому углу ближайшего позиционированного предка */
+}
+
+.fixed-example {
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Прижать к нижнему левому углу окна браузера */
+}
+
+.sticky-example {
+  position: sticky;
+  top: 0; /* "Залипнет" в верхней части окна при прокрутке вниз */
+}
+
+
+.button {
+  background-color: blue;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+@keyframes example {
+  from {background-color: blue;}
+  to {background-color: yellow;}
+}
+
+.animated-element {
+  width: 100px;
+  height: 100px;
+  animation-name: example;
+  animation-duration: 2s;
+}

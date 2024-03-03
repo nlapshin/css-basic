@@ -1,0 +1,22 @@
+// Определение переменных
+$backgroundColor: #f0f0f0;
+$textColor: #333;
+$headingColor: darkblue;
+
+// Миксин для заголовков
+@mixin headingStyle {
+  color: $headingColor;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $textColor;
+  font-family: 'Helvetica', sans-serif;
+
+  h1 {
+    @include headingStyle;
+    font-size: 2em;
+  }
+}
